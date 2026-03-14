@@ -13,5 +13,51 @@ body {
     padding: 0;
     min-height: 100vh;
     background-color: #fff;
+    font-family: 'Inter', sans-serif;
 }
 
+/* ----------------------------------------------HEADER------------------------------------------ */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-droite {
+    display: flex;
+    align-items: center;
+}
+
+.header-bonjour {
+    flex: 0;
+}
+
+.header-logo {
+    max-height: 25px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-revenu {
+    margin-right: 20px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 30px;;
+}
+
+.header-connexion {
+    margin-left: 0;
+    flex: 0;
+}
+
+.header-connexion-image {
+    max-height: 50px;
+    width: auto;
+}

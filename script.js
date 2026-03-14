@@ -51,5 +51,5 @@ switch (mois) {
 const dateFormatee = `${jour} ${mois} ${annee}`;
 
 // Mettre la date dans le h1
-const h1 = document.querySelector('.bonjour-date');
+const h1 = document.querySelector('.header-bonjour-date');
 h1.textContent = dateFormatee;
