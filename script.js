@@ -54,7 +54,7 @@ const dateFormatee = `${jour} ${mois} ${annee}`;
 const h1 = document.querySelector('.header-bonjour-date');
 h1.textContent = dateFormatee;
 
-// ========================================== DIAGRAMME DÉPENSES ==========================================
+// ========================================== DIAGRAMME DÉPENSES ========================================== 
 
 // Données des dépenses (évolutif - facile à modifier/ajouter)
 const depensesData = [
@@ -81,7 +81,7 @@ if (ctxChart) {
                 {
                     data: montants,
                     backgroundColor: couleurs,
-                    borderColor: '#fff',
+                    borderColor: '#000',
                     borderWidth: 3,
                     padding: 20
                 }
