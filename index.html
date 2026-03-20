@@ -8,23 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <section class="header">
-
         <div class="header-gauche">
-
             <div class="header-bonjour">
                 <p class="header-bonjour-date"></p>
                 <h1 class="header-bonjour-message">Bienvenue</h1>
             </div>
-        
         </div>
 
         <img src="logo.svg" class="header-logo">
 
         <div class="header-droite">
-
             <div class="header-revenu">
                 <p class="header-revenu-texte">MON REVENU (€)</p>
                 <input type="number" class="header-revenu-revenu">
@@ -32,14 +29,33 @@
             </div>
 
             <div class="header-connexion">
-            <img href="#" src="utilisateur.svg" class="header-connexion-image">
+                <img href="#" src="utilisateur.svg" class="header-connexion-image">
+            </div>
         </div>
-
-        </div>
-
-        
-
     </section>
+
+    <main class="container">
+        <section class="balance">
+            <div class="balance-content">
+                <p class="balance-content-texte">Balance actuelle</p>
+                <p class="balance-content-euro">2000,00€</p>
+            </div>
+        </section>
+
+        <section class="depenses">
+            <div class="depenses-content">
+                <p class="depenses-content-texte">Dépenses actuelles</p>
+                <p class="depenses-content-euro">1294,56€</p>
+            </div>
+        </section>
+
+        <section class="diagramme">
+            <h2 class="diagramme-titre">Répartition des dépenses</h2>
+            <div class="diagramme-container">
+                <canvas id="depensesChart"></canvas>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
