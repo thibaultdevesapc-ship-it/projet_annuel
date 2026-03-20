@@ -55,6 +55,31 @@
                 <canvas id="depensesChart"></canvas>
             </div>
         </section>
+
+        <section class="formulaire">
+            <h2 class="formulaire-titre">Déclarer une dépense</h2>
+            <p class="formulaire-texte">Remplire ce formulaire vous permet de déclarer toutes vos nouvelles dépenses.</p>
+            <form method="post" action="form.php" class="formulaire-form">
+
+                <label for="date">DATE</label>
+                <input type="date" id="date" name="date"/>
+
+                <label for="montant">MONTANT (€)</label>
+                <input type="number" id="montant" name="montant"/>
+
+                <label for="categorie">CATÉGORIE</label>
+                <select class="formulaire-categorie">
+                    <option value="Courses">Courses</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Divertissement">Divertissement</option>
+                    <option value="Factures">Factures</option>
+                    <option value="Loyer">Loyer</option>
+                    <option value="Restaurant">Restaurant</option>
+                </select>
+
+                <input type="submit" name="valider" value="VALIDER"/>
+            </form>
+        </section>
     </main>
 
     <script src="script.js"></script>
