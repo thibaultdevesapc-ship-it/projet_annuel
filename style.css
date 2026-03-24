@@ -115,6 +115,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
+    min-width: 100%;
 }
 
 /* ----------------------------------------------BALANCE------------------------------------------ */
@@ -123,6 +124,7 @@ body {
     display: flex;
     align-items: center;
     grid-row: span 1;
+    min-width: 100%;
     max-width: 500px;
     height: 150px;
     background-color: #e3f7ff;
@@ -149,6 +151,7 @@ body {
     display: flex;
     align-items: center;
     grid-row: span 1;
+    min-width: 100%;
     max-width: 500px;
     height: 150px;
     background-color: #ffe3e3;
@@ -177,6 +180,7 @@ body {
     background-color: #f5f5f5;
     border-radius: 30px;
     max-width: 500px;
+    min-width: 100%;
     border: 3px solid black;
 }
 
@@ -205,4 +209,92 @@ body {
     border: 3px solid black;
     border-radius: 30px;
     max-height: 200px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.formulaire-t-titre {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.formulaire-t-texte {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+
+
+.formulaire-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+}
+
+/*-------------------------------------------------------------------------------------------
+C'EST L'IA QUI A FAIT CE QUI SUIT, RESTE A CORRIGER
+---------------------------------------------------------------------------------------------*/
+
+
+/* ===== LABELS ===== */
+.formulaire-label {
+    grid-row: 1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== INPUTS & SELECT ===== */
+.formulaire-input-select {
+    grid-row: 2;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    transition: border-color 0.2s ease;
+}
+
+.formulaire-input-select:hover {
+    border-color: #999;
+}
+
+.formulaire-input-select:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: none;
+}
+
+/* ===== BOUTON ===== */
+.formulaire-bouton {
+    grid-column: span 3;
+    grid-row: 3;
+    padding: 12px 24px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formulaire-bouton:hover {
+    background-color: #444;
+}
+
+.formulaire-bouton:active {
+    background-color: #222;
 }
