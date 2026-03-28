@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: #222;
+    color: #fff;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -12,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #f9fbfc;
     font-family: 'Inter', sans-serif;
     margin-left: 30px;
     margin-right: 30px;
@@ -39,10 +44,28 @@ body {
 
 .header-bonjour {
     flex: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid black;
+    min-height: 100px;
+    width: auto;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+}
+
+.header-bonjour-date {
+    margin: 0 20px;
+}
+
+.header-bonjour-message {
+    margin: 0 20px;
 }
 
 .header-logo {
-    max-height: 25px;
+    max-height: 100%;
+    border: 3px solid black;
+    border-radius: 30px;
     width: auto;
     position: absolute;
     left: 50%;
@@ -54,10 +77,11 @@ body {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .header-revenu-revenu {
-    border: none;
+    border: 1px solid rgb(168, 168, 168);
     background-color: #fff;
     border-radius: 30px;
     height: 30px;
@@ -91,16 +115,20 @@ body {
 .header-revenu-bouton:hover {
     background-color: #dddddd;
     transition: all 0.1s;
+    cursor: pointer;
 }
 
 .header-connexion {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 30px;
+    border: 3px solid black;
 }
 
 .header-connexion:hover {
     background-color: #dddddd;
+    transition: all 0.1s;
+    cursor: pointer;
 }
 
 .header-connexion-image {
@@ -115,7 +143,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
-    min-width: 100%;
 }
 
 /* ----------------------------------------------BALANCE------------------------------------------ */
@@ -126,7 +153,7 @@ body {
     grid-row: span 1;
     min-width: 100%;
     max-width: 500px;
-    height: 150px;
+    height: auto;
     background-color: #e3f7ff;
     border-radius: 30px;
     border: 3px solid black;
@@ -153,7 +180,7 @@ body {
     grid-row: span 1;
     min-width: 100%;
     max-width: 500px;
-    height: 150px;
+    height: auto;
     background-color: #ffe3e3;
     border-radius: 30px;
     border: 3px solid black;
@@ -176,12 +203,17 @@ body {
 
 .diagramme {
     grid-row: span 2;
+    grid-column: 3;
     padding: 15px;
     background-color: #f5f5f5;
     border-radius: 30px;
     max-width: 500px;
     min-width: 100%;
     border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .diagramme-titre {
@@ -194,21 +226,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 #depensesChart {
     max-height: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* ----------------------------------------------FORMULAIRE------------------------------------------ */
 
 .formulaire {
+    grid-row: 2;
     grid-column: span 2;
     background-color: #e6ffe3;
     padding: 20px;
     border: 3px solid black;
     border-radius: 30px;
-    max-height: 200px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -226,8 +263,6 @@ body {
     margin-bottom: 5px;
 }
 
-
-
 .formulaire-form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -235,22 +270,14 @@ body {
     gap: 15px;
 }
 
-/*-------------------------------------------------------------------------------------------
-C'EST L'IA QUI A FAIT CE QUI SUIT, RESTE A CORRIGER
----------------------------------------------------------------------------------------------*/
-
-
-/* ===== LABELS ===== */
 .formulaire-label {
     grid-row: 1;
     font-size: 0.75rem;
     font-weight: 600;
     color: #555;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* ===== INPUTS & SELECT ===== */
 .formulaire-input-select {
     grid-row: 2;
     padding: 12px 14px;
@@ -273,7 +300,6 @@ C'EST L'IA QUI A FAIT CE QUI SUIT, RESTE A CORRIGER
     box-shadow: none;
 }
 
-/* ===== BOUTON ===== */
 .formulaire-bouton {
     grid-column: span 3;
     grid-row: 3;
@@ -288,7 +314,7 @@ C'EST L'IA QUI A FAIT CE QUI SUIT, RESTE A CORRIGER
     cursor: pointer;
     transition: background-color 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .formulaire-bouton:hover {
@@ -297,4 +323,55 @@ C'EST L'IA QUI A FAIT CE QUI SUIT, RESTE A CORRIGER
 
 .formulaire-bouton:active {
     background-color: #222;
+}
+
+/* ----------------------------------------------HISTORIQUE------------------------------------------ */
+
+.historique {
+    grid-row: 3;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #e3e3ff;
+    border: 3px solid black;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.historique-header {
+    grid-row: 1;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.historique-header-titre {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.historique-header-nbOperations {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.historique-labels {
+    grid-row: 2;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.historique-dépenses {
+    grid-row: 3;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
 }
