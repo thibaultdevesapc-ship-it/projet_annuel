@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <img src="logo.svg" class="header-logo">
+        <img src="logo.png" class="header-logo">
 
         <div class="header-droite">
             <div class="header-revenu">
@@ -62,8 +62,6 @@
                 <p class="formulaire-t-texte">Remplire ce formulaire vous permet de déclarer toutes vos nouvelles dépenses.</p>
             </div>
 
-
-
             <form method="post" action="form.php" class="formulaire-form">
 
                 <label for="date" class="formulaire-label 1">DATE</label>
@@ -81,12 +79,27 @@
                     <option value="Loyer">Loyer</option>
                     <option value="Restaurant">Restaurant</option>
                 </select>
-
                 <input type="submit" name="valider" value="VALIDER" class="formulaire-bouton"/>
             </form>
+        </section>
 
-
-
+        <section class="historique">
+            <div class="historique-header">
+                <h2 class="historique-header-titre">Historique des dépenses</h2>
+                <p class="historique-header-nbOperations">1 opération</p>
+            </div>
+            <div class="historique-labels">
+                <div>DATE</div>
+                <div>CATÉGORIE</div>
+                <div>MONTANT</div>
+                <div>ACTIONS</div>
+            </div>
+            <div class="historique-dépenses">
+                <div>2026-01-29</div>
+                <div>Nourriture</div>
+                <div>100,00€</div>
+                <div>Supprimer</div>
+            </div>
         </section>
     </main>
 
